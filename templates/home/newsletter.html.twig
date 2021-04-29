@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ encore_entry_link_tags('home') }}
+    <section class="bg-orange">
+        <div class="link-container">
+            {{ form(form) }}
+        </div>
+    </section>
+{% endblock %}
+
+{% block title %}
+    {{ parent() }}
+    - Newsletter
+{% endblock %}
+

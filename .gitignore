@@ -113,3 +113,9 @@ fabric.properties
 # CodeStream plugin
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
