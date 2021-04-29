@@ -1,7 +1,9 @@
 <?php
 
+namespace App\Service;
 
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 
@@ -22,7 +24,7 @@ class MailerService
             ->to($mail)
             ->subject('Accusé d\'inscription à la newsletter')
             ->htmlTemplate('mails/newsletter.html.twig')
-            ->context(['email' => $mail]);
+            ->context(['mail' => $mail]);
 
         $this->sendMail($email);
     }
