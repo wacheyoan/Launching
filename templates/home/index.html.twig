@@ -6,5 +6,25 @@
 {% endblock %}
 
 {% block body %}
-
+    {{ encore_entry_link_tags('home') }}
+    <section class="bg-black first-section">
+        <div class="image-container">
+            <img src="{{ asset('img/shoe.png') }}" alt="Yeezy 700 Bright Blue">
+        </div>
+        <div class="compteur">
+            <div id="days">00</div>
+            <div id="hours">00</div>
+            <div id="minutes">00</div>
+            <div id="seconds">00</div>
+        </div>
+    </section>
+    <section class="bg-orange second-section">
+        <div class="title-container">
+            <h2>COMING SOON</h2>
+        </div>
+        <div class="link-container">
+            <a href="" class="btn">RESERVEZ-LA</a>
+        </div>
+    </section>
+    {{ encore_entry_script_tags('home') }}
 {% endblock %}
