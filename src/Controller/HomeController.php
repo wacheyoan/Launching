@@ -13,4 +13,10 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
+
+    #[Route('/newsletter', name: 'newsletter')]
+    public function newsletter(): Response
+    {
+        return $this->render('home/newsletter.html.twig');
+    }
 }
