@@ -113,12 +113,36 @@ section{
 }
 
 .btn{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
+}
+
+.btn-big{
     font-size: 1.5em;
+    padding: 15px 32px;
+}
+
+.btn-small{
+    font-size: 1em;
+    padding: 7px 16px;
+}
+
+form{
+    font-size: 2em;
+}
+
+form .btn{
+    width: 100%;
+    margin-top: 5px;
+}
+
+form input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
 }

@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Form\NewsLetterType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,8 +17,17 @@ class HomeController extends AbstractController
     }
 
     #[Route('/newsletter', name: 'newsletter')]
-    public function newsletter(): Response
+    public function newsletter(Request $request): Response
     {
-        return $this->render('home/newsletter.html.twig');
+        $form = $this->createForm(NewsLetterType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            dump($form);
+        }
+
+        return $this->render('home/newsletter.html.twig',[
+            'form' => $form->createView()
+        ]);
     }
 }
